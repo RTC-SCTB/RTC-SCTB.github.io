@@ -1,2 +1,2 @@
 # RTC-SCTB.github.io
-Сайт СКТБ
+[Сайт СКТБ](https://rtc-sctb.github.io) 
