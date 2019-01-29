@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>СКТБ ЦНИИ РТК</title>
+	<link rel="stylesheet" href="/css/styles.css" type="text/css">
+	<!-- <link rel="stylesheet" href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/css/styles.css" type="text/css"> -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<a href="/">
+				<img height="50" src="/images/robot-logo.png" alt="logo"></a>
+				<!-- src="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/images/robot-logo.png" alt="logo"></a> -->
+			<form name="search" action="#" method="get">
+				<input type="text" name="q" placeholder="Search">
+				<button type="submit">Искать</button>
+			</form>
+		</header>
+
+		<!-- Главное меню сайта -->
+		<nav>
+			<ul class="top-menu">
+				<li><a href="/index.html">ГЛАВНАЯ</a></li>
+				<li class="active">DATABASE</li>
+				<li><a href="/projects/projects.html">ПРОЕКТЫ</a></li>
+				<li><a href="/documentation/documentation.html">ДОКУМЕНТАЦИЯ</a></li>
+				<li><a href="/team/team.html">НАША КОМАНДА</a></li>
+				<li><a href="/contact/contact.html">КОНТАКТЫ</a></li>
+			</ul>
+		</nav>
+		<!-- <nav>
+			<ul class="top-menu">
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/index.html">ГЛАВНАЯ</a></li>
+				<li class="active">DATABASE</li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/projects/projects.html">ПРОЕКТЫ</a></li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/documentation/documentation.html">ДОКУМЕНТАЦИЯ</a></li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/team/team.html">НАША КОМАНДА</a></li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/contact/contact.html">КОНТАКТЫ</a></li>
+			</ul>
+		</nav> -->
+
+		<!-- Заголовок страницы -->
+		<div class="heading">
+			<h1>GStreamer</h1>
+		</div>
+
+		<!-- Подменю страницы в сайдбаре -->
+		<aside>
+			<nav>
+				<ul class="aside-menu">
+					<li><a href="../database.html">Общее</a></li>
+					<li><a href="../battery/battery.html">Аккумуляторы</a></li>
+					<li><a href="../bullet/bullet.html">Bullet</a></li>
+					<li><a href="../github/github.html">Немного о GitHub</a></li>
+					<li class="active">GStreamer</li>
+					<li><a href="../python/python.html">Фичи Python</a></li>
+					<li><a href="../raspberrypi/raspberrypi.html">Raspberry Pi</a></li>
+					<li><a href="../ubuntu/ubuntu.html"></a>Ubuntu</li>
+					<li><a href="../other/other.html">Полезные ссылки и др</a></li>
+				</ul>
+				<!-- <ul class="aside-menu">
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/database.html">Общее</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/battery/battery.html">Аккумуляторы</li>
+					<li class="active">Bullet</li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/github/github.html">Немного о GitHub</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/gstreamer/gstreamer.html">GStreamer</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/python/python.html">Фичи Python</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/raspberrypi/raspberrypi.html">Raspberry Pi</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/ubuntu/ubuntu.html"></a>Ubuntu</li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/other/other.html">Полезные ссылки и др</a></li>
+				</ul> -->
+			</nav>
+		</aside>
+		<section class="general-content">
+			<p>
+				<b>GStreamer</b> - фреймворк для передачи видео и аудио потоков. Позволяет получать поток с камер, микрофонов и т.п. склеивать их между собой, преобразовывать, выводить на экран, записывать в файл и т.д. и т.п.<br>
+				<a href="https://gstreamer.freedesktop.org/">Официальный сайт</a>
+			</p>
+
+			<h2>Общая информация<br><i>(Большее для тех, кто захочет наисать свое приложение, в котором будет использоваться GStreamer)</i></h2>
+			<p>
+				Вся работа GStreamer построена на принципе т.н. цепочек - <i>pipeline</i>. Их поведение очень напоминает то, как течет вода по трубам. Цепочки собираются из элементов, которые в общем случае можно разделить на 3 группы: источники, приемники и обработчики. Каждый элемент имеет т.н. пады - <i>pads</i> с помощью которых он как раз и стыкуется с другими элементами. Пад может быть либо "источником" - <i>src</i>, либо "сливом" - <i>sink</i>. Таким образом получаем:
+				<ul>
+					<li>Источники - обладают только падами <i>src</i>, примеры:
+						<ul>
+							<li><i>autovideosrc</i> - автоматически пытается определить источник видео и подключиться к нему;</li>
+							<li><i>v4l2src</i> - источник видео с usb камер, расшифровывается как Video for Linux to src.</li>
+						</ul>
+					</li>
+					<br>
+					<li>Приемники - обладают только падами <i>sink</i>, примеры:
+						<ul>
+							<li><i>autovideosink</i> - самый простой вывод картинки на экран, автоматически определяет необходимые параметры;</li>
+							<li><i>glimagesink</i> - вывод на экран картинки из OpenGL (поправьте если ошибаюсь).</li>
+						</ul>
+					</li>
+					<br>
+					<li>Обработчики - могут иметь по несколько падов обоих видов, примеры:
+						<ul>
+							<li><i>tee</i> - элемент, который позволяет дублировать поток, например чтобы вывести его одновременно и на экран и в файл;</li>
+							<li><i>jpegdec</i> - декодирует поток из jpeg для вывода на экран (скорее всего здесь сказано не совсем правильно).</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+
+			<h3>Полезные инструменты</h3>
+			<p>
+				<ul>
+					<li>
+						<i>gst-device-monitor-1.0</i> - консольная команда (для Ubuntu, в Raspbian по неустановленной причине может не работать), которая возвращает информацию о подключенных устройствах ввода и вывода. Используется в первую очередь для того, чтобы определить какой формат может воспроизвести подключенная камера. Выбранный формат прописывается в переменную CAPS в скрипте (или вашем коде). Здесь же можно узнать допустимые разрешения изображения, кол-во FPS (кадров в секунду);
+					</li>
+					<br>
+					<li>
+						<i>gst-inspect-1.0</i> - консольная команда, которая позволяет получить полную информацию об интересующем элементе GStreamer, например: <i>gst-inspect-1.0 autovideosink.</i>
+					</li>
+				</ul>
+			</p>
+
+			<h3>Примеры</h3>
+			<p>
+				В папке <a href="examples/">Examples лежат примеры sh-скриптов для отправки и приема видео.</a>
+				<ul>
+					<li>
+						<i>sender_double.sh</i> - отправка двух видеопотоков сразу, с аппаратной камеры Raspberry Pi и с USB камеры, отправка идет на IP адрес указанный в переменной DEST. Для корректной работы возможно придется поправить CAPS для USB камеры, чтобы узнать правильные значения используйте <i>gst-device-monitor-1.0</i>;
+					</li>
+					<br>
+					<li>
+						<i>receiver_double.sh</i> - прием двух видеопотоков сразу, с аппаратной камеры Raspberry Pi и с USB камеры, при этом на картинку с камеры Raspberry Pi накладывается картинка с прозрачным фоном;
+					</li>
+					<br>
+					<li>
+						<i>receiver_rpicam.sh</i> и <i>receiver_usbcam.sh</i> - по большому счету это две половинки скрипта <i>receiver_double.sh</i>.
+					</li>
+				</ul>
+			</p>
+
+			<h3>Полезные ссылки</h3>
+			<p>
+				<ul>
+					<li>
+						<a href="https://gstreamer.freedesktop.org/documentation/application-development/advanced/pipeline-manipulation.html">Манипуляции с pipeline</a> (работа с API);
+					</li>
+					<br>
+					<li>
+						<a href="https://gist.github.com/sphaero/02717b0b35501ad94863">Скрипт для установки GStreamer последней версии из исходников;</a><br>
+						<i><b>ВАЖНО:</b> работоспособность не проверялась очень давно. Возможны неожиданные сюрпризы;</i>
+					</li>
+					<br>
+					<li>
+						<a href="https://github.com/neuromozg/RPicam-Streamer">
+						Трансляция RTP видео с Raspberry Pi камеры с параллельной обработкой кадров в OpenCV.</a>
+					</li>
+				</ul>
+			</p>		
+		</section>
+	</div>
+	<footer></footer>
+</body>
+</html>
