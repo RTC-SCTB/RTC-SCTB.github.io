@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>СКТБ ЦНИИ РТК</title>
+	<link rel="stylesheet" href="/css/styles.css" type="text/css">
+	<!-- <link rel="stylesheet" href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/css/styles.css" type="text/css"> -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,300" type="text/css">
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<a href="/">
+				<img height="50" src="/images/robot-logo.png" alt="logo"></a>
+				<!-- src="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/images/robot-logo.png" alt="logo"></a> -->
+			<form name="search" action="#" method="get">
+				<input type="text" name="q" placeholder="Search">
+				<button type="submit">Искать</button>
+			</form>
+		</header>
+
+		<!-- Главное меню сайта -->
+		<nav>
+			<ul class="top-menu">
+				<li><a href="/index.html">ГЛАВНАЯ</a></li>
+				<li class="active">DATABASE</li>
+				<li><a href="/projects/projects.html">ПРОЕКТЫ</a></li>
+				<li><a href="/documentation/documentation.html">ДОКУМЕНТАЦИЯ</a></li>
+				<li><a href="/team/team.html">НАША КОМАНДА</a></li>
+				<li><a href="/contact/contact.html">КОНТАКТЫ</a></li>
+			</ul>
+		</nav>
+		<!-- <nav>
+			<ul class="top-menu">
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/index.html">ГЛАВНАЯ</a></li>
+				<li class="active">DATABASE</li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/projects/projects.html">ПРОЕКТЫ</a></li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/documentation/documentation.html">ДОКУМЕНТАЦИЯ</a></li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/team/team.html">НАША КОМАНДА</a></li>
+				<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/contact/contact.html">КОНТАКТЫ</a></li>
+			</ul>
+		</nav> -->
+
+		<!-- Заголовок страницы -->
+		<div class="heading">
+			<h1>Фичи Python</h1>
+		</div>
+
+		<!-- Подменю страницы в сайдбаре -->
+		<aside>
+			<nav>
+				<ul class="aside-menu">
+					<li><a href="../database.html">Общее</a></li>
+					<li><a href="../battery/battery.html">Аккумуляторы</a></li>
+					<li><a href="../bullet/bullet.html">Bullet</a></li>
+					<li><a href="../github/github.html">Немного о GitHub</a></li>
+					<li><a href="../gstreamer/gstreamer.html">GStreamer</a></li>
+					<li class="active">Фичи Python</li>
+					<li><a href="../raspberrypi/raspberrypi.html">Raspberry Pi</a></li>
+					<li><a href="../ubuntu/ubuntu.html"></a>Ubuntu</li>
+					<li><a href="../other/other.html">Полезные ссылки и др</a></li>
+				</ul>
+				<!-- <ul class="aside-menu">
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/database.html">Общее</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/battery/battery.html">Аккумуляторы</li>
+					<li class="active">Bullet</li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/github/github.html">Немного о GitHub</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/gstreamer/gstreamer.html">GStreamer</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/python/python.html">Фичи Python</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/raspberrypi/raspberrypi.html">Raspberry Pi</a></li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/ubuntu/ubuntu.html"></a>Ubuntu</li>
+					<li><a href="C:/Users/Студент1/Desktop/RTC-SCTB.github.io/database/other/other.html">Полезные ссылки и др</a></li>
+				</ul> -->
+			</nav>
+		</aside>
+		<section class="general-content">
+			<h2>Содержание</h2>
+			<p>
+				<ul>
+					<li><a href="#usefull-moments">Полезные моменты для работы.</a>
+					<ul>
+							<li><a href="#сonnecting-modules-from-other-folders">Подключение модулей из других папок.</a></li>
+						</ul>
+					</li>
+					<br>
+					<li><a href="#special-methods">Специальных методах;</a>
+						<ul>
+							<li><a href="#initialization-end-of-work">Инициализация/окончание работы;</a></li>
+							<li><a href="#bringind-data-types">Приведение типов;</a></li>
+							<li><a href="#attribute-access-control">Контроль доступа к аттрибутам;</a></li>
+							<li><a href="#class-representation">Представление классов;</a></li>
+							<li><a href="#comparison-arithmetic-operators-etc">Сравнение/Арифметические операторы и т.д.;</a></li>
+						</ul>
+					</li>
+					<br>
+					<li><a href="#python-books">Полезные книги</a></li>
+					<br>
+					<li><a href="#usefull-references">Полезные ссылки</a></li>
+				</ul>
+			</p>
+
+			<h2><a name="usefull-moments">Полезные моменты</a></h2>
+			<p>
+				Тут будут собраны всякие полезные моменты, которые могут облегчить процесс написания кода.
+			</p>
+			<h3><a name="сonnecting-modules-from-other-folders">Подключение модулей из других папок</a></h3>
+			<p>
+				Для удобства в проекте все внешние подключаемые модули вынести в отдельную папку, например <i>include.</i><br>
+				Допустим структура проекта выглядит вот так:
+				<img src="images/structure.png">
+				<br>
+				Здесь в папке include лежат два модуля <b>RTCJoystick</b> и <b>PRiPWM</b>.
+				Модуль <b>RPiPWM</b> можно подключить к файлу <b>test.py</b> таким образом:<br>
+				<br><span class="red">import</span> sys<br>
+				sys.path.append('include')<br>
+				<span class="red">from</span> MyRPiPWM <span class="red">import</span> RPiPWM<br>
+				<br><br>
+				Это эквивалентно тому, что мы положили файл <b>RPiPWM.py</b> рядом с файлом <b>test.py.</b><br>
+				Поскольку модуль <b>RTCJoystick</b> требует подключения модуля <b>RTCEventMaster</b>, несмотря на то, что файлы лежат рядом, также подключить модуль не получится, python не знает пути до <b>RTCEventMaster</b> 	и выдаст ошибку. Поэтому, чтобы его подключить нужно написать вот так:<br><br>
+				<span class="red">import sys</span><br>
+				sys.path.append('include/Joystick')<br>
+				<span class="red">import</span> RTCJoystick<br><br>
+				Чтобы так не делать, по хорошему импортируемый модуль должен содержать файл <b>__init__.py</b> в котором будет описано, что и откуда данный модуль импортирует для своей работы. Например в случае с <b>RTCJoystick</b> он должен выглядеть так:<br><br>
+				<span class="red">from</span> . <span class="red">import</span> RTCEventMaster<br><br>
+				В этом же файле может содержаться информация о версии импортируемого модуля.
+				Подробнее смотреть <a href="https://docs.python.org/3/distutils/setupscript.html?highlight=__init__"> тут.</a> <br><br>
+				Допустимые записи:<br><br>
+				<span class="red">import</span> sys<br>
+				sys.path.append('include')<br>
+				sys.path.append('include/Joystick')<br>
+				<span class="red">from</span> MyRPiPWM <span class="red">import</span> RPiPWM<br>
+				<span class="red">import</span> RTCJoystick<br><br>
+				или<br><br>
+
+				<span class="red">import</span> sys<br>
+				sys.path.append('include/MyRPiPWM')<br>
+				sys.path.append('include/Joystick')<br>
+				<span class="red">import</span> RTCJoystick<br>
+				<span class="red">import</span> RPiPWM<br><br>
+				Также (вроде) допустимо называть папку также как модуль, и писать, например:<br><br>
+				<span class="red">from</span> RPiPWM <span class="red">import</span> RPiPWM<br>
+				<b>ВАЖНО:</b> требуется дополнительное исследование этого всего.
+
+			</p>
+
+			<h2><a name="special-methods">Специальные методы</a></h2>
+			<p>
+					<b>Специальные методы</b> - одна из основных фич питона. Заставляют ваши классы работать подобно встроенных классов, а также делают много чего полезного.
+				<p>Тут будут описаны основные и наиболее полезные методы</p>
+	 
+				<h3><a name="initialization-end-of-work">Инициализация/окончание работы</a></h3>
+				<p>
+					<ul>
+						<li>__init__(self, *args)
+							<br>
+							<span class="red">class</span> Test:
+						    <span class="red">def</span> __init__(self, <span class="red">*</span>args):
+						        <span class="red">pass</span>
+						        
+							Test(1, 2, 3)
+							Метод - инициализатор класса, принимает аргументы, при котором будет вызван	конструктор класса.<br>
+						</li>
+						
+						<li>__new__(cls, *args)
+							<span class="red">class</span> Test:
+							    <span class="red">def</span> __new__(cls, <span class="red">*</span>args):
+							        <span class="red">pass</span><br><br>
+							Метод - инициализатор, который вызывается самым первым до __init__ принимает в качестве аргумента класс и аргументы, которые будут переданы в __init__. Используется редко, в основном полезен при наследовании от неизменяемых классов(+ при наследовании от numpy.ndarray)
+						</li>
+						<li>__del__(self) Деструктор, вызывается при окончании работы интерпритатора, когда запускается сборщик мусора. Полезен для дополнительной чистки программы - закрытие портов, файлов и т.д.
+						</li>
+					</ul>
+				</p>
+
+				<h3><a name="bringind-data-types">Приведение типов;</a></h3>
+				<p>
+					Приводят типы к встроенным типам int, float, double и т.д. Полезны, иногда работают неявно:<br>
+					<br>
+					if object:<br>
+					    pass<br>
+					<p>Для Проверки истинности вызовется приведение к bool.
+
+					class Gpio:<br>
+					    def __init__(self):<br>
+					        self._pin = 1<br>
+				        <br>
+					    def __int__(self):<br>
+					        return self._pin<br>
+					    <br>
+					gpio = Gpio()<br>
+					pin = int(gpio)<br>
+				</p>
+
+				<p>
+					<ul>
+						<li>__int__(self) Преобразование типа в int.</li>
+
+						<li>__long__(self) Преобразование типа в long.</li>
+
+						<li>__float__(self) Преобразование типа в float.</li>
+
+						<li>__complex__(self) Преобразование типа в комплексное число.</li>
+
+						<li>__oct__(self) Преобразование типа в восьмеричное число.</li>
+
+						<li>__hex__(self) Преобразование типа в шестнадцатиричное число.</li>
+
+						<li>__index__(self)<br> Преобразование типа к int, когда объект используется в срезах (выражения вида [start:stop:step]). Если вы определяете свой числовый тип, который может использоваться как индекс списка, вы должны определить __index__.</li>
+					</ul>
+				</p>
+
+				<h3><a name="attribute-access-control">Контроль доступа к аттрибутам;</a></h3>		
+				<p>
+					Тут находятся одни из самых важных специальных методов.<br>
+					<ul>
+						<li>
+							__setattr__(self, name, value) Это один из мощных методов, который при неправильном использовании сломает ваше приложение, психику и, возможно, жизнь. Его первоначальная задача - создать в классе self аттрибут с именем name и значением value или изменить аттрибут с таким же именем:<br><br>
+							class Past:<br>
+							    def __init__(self):<br>
+							        pass<br>
+							<br>
+							past = Past()<br>
+							past.lol = 2  # равноценно вызову past.__setattr__("lol", 2)<br>
+							print(past.lol)     # будет выведено 2<br>
+						</li>
+					</ul>
+					<ul>
+						В чем особенности:
+
+						<li>
+							Можно запрещать присваивать все аттрибуты:<br>
+							class Enum:<br>
+							    first = 1<br>
+							    second = 2<br>
+							<br>
+							    def __setattr__(self, key, value):<br>
+							        raise AttributeError("Нельзя менять значения")<br>
+							<br>        
+							enum = Enum()<br>
+							enum.first = 2  # вызовется исключение<br><br>
+							НО))) Вот так сделать не получится:<br>
+							<br><br>
+							class SomeData:<br>
+							    def __init__(self):<br>
+							        self.data = 1   # тут вызовется исключение, т.к. <br>вызовется self.__setattr__("data", 1) :)<br>
+							<br>
+							    def __setattr__(self, key, value):<br>
+							        raise AttributeError("Нельзя менять значения")<br>
+							<br>
+							data = SomeData()<br>
+						</li>
+
+						<li>
+							А еще он может подгадить так:<br><br>
+							class Test:<br>
+							    def __init__(self):<br>
+							        self.data = 1   # тут класс войдет в рекурсию) и при привышении стека вызовов вызовется исключение<br>
+							<br>
+							    def __setattr__(self, key, value):<br>
+							        if key == "data":<br>
+							            self.data = value<br>
+							<br>
+							Test()<br><br>
+							Решением этого является:<br>
+							<br>
+							class Test:<br>
+							    def __init__(self):<br>
+							        self.data = 1<br>
+							        self.otherData = 2<br>
+							<br>
+							    def __setattr__(self, key, value):<br>
+							        self.__dict__[key] = value  # добавляем/изменяем <br>значение одного из полей класса без вызова __setattr__<br>
+							<br>
+							test = Test()<br>
+							print(test.__dict__)    # выведется {'data': 1, 'someData': 2}<br><br> 
+							Казалось бы, зачем он вообще тогда нужен, и лучше бы его не трогать, и это разумно)<br>
+						</li>
+
+						<li>
+							<br>
+							Приватные переменные<br><br>
+							class Private:<br>
+							    def __init__(self):<br>
+							        self.__privateVar = 22  # В памяти класса эта переменная будет храниться как _Private__privateVar<br> 
+							<br>
+							private = Private()<br>
+							private.__privateVar = 1    # Т.к. переменная __privateVar была создана с другим именем, имя __privateVar свободно,<br>
+							#  и оно занимается данным значением<br>
+						</li>
+					</ul>
+					Одно из решений, сделанных в библиотеке vispy:
+					<img src="images/frozen.png">
+					Классы наследуются от Frozen и после вызова freeze нельзя добавить новых аттрибутов, также при наследовании от классов наследников Frozen, после их инициализации также нельзя добавлять новых аттрибутов.<br>
+					<br>
+					Данный метод - один из ключевых специальных методов класса, который может сделать питон более похожим на стандартное ООП
+				</p>	
+
+				<h3><a name="class-representation">Представление классов;</a></h3>		
+				<p>
+					class Test:<br>
+					    def __init__(self):<br>
+					        self._data = 10<br>
+					<br>
+					    def __repr__(self):<br>
+					        return "<Class Test: data=" + self._data + ">"<br>
+					<br>
+					test = Test()<br>
+					print(test)     # напечатает <Class Test: data=10><br><br>
+					<ul>
+						<li>
+							__str__(self) Определяет поведение функции str(), вызванной для экземпляра вашего класса;
+						</li>
+
+						<li>
+							__repr__(self) Определяет поведение функции repr(), вызыванной для экземпляра вашего класса. Главное отличие от str() в целевой аудитории. repr() больше предназначен для машинно-ориентированного вывода (более того, это часто должен быть валидный код на Питоне), а str() предназначен для чтения людьми;
+						</li>
+
+						<li>
+							__format__(self, formatstr) Определяет поведение, когда экземпляр вашего класса используется в форматировании строк. Например, "Hello, {0:abc}!".format(a) приведёт к вызову a.__format__("abc"). Это может быть полезно для определения ваших собственных числовых или строковых типов, которым вы можете захотеть предоставить какие-нибудь специальные опции форматирования;
+						</li>
+
+						<li>
+							__hash__(self) Определяет поведение функции hash(), вызыванной для экземпляра вашего класса. Метод должен возвращать целочисленное значение, которое будет использоваться для быстрого сравнения ключей в словарях. Заметьте, что в таком случае обычно нужно определять и __eq__ тоже. Руководствуйтесь следующим правилом: a == b подразумевает hash(a) == hash(b);
+						</li>
+
+						<li>
+							__sizeof__(self) Определяет поведение функции sys.getsizeof(), вызыванной на экземпляре вашего класса. Метод должен вернуть размер вашего объекта в байтах. Он главным образом полезен для классов, определённых в расширениях на C, но всё-равно полезно о нём знать.
+						</li>
+					</ul>
+				</p>
+
+				<h3><a name="comparison-arithmetic-operators-etc">Сравнение/Арифметические операторы и т.д.;</a></h3>		
+				<p>
+					<b>Дальнейшие операторы, могут внести не понятный интуитивно смысл и использовать их нужно очень осторожно</b><br>
+					<br>
+					<b>Их можно и иногда нужно неиспользовать</b><br>
+
+					<ul>
+						<li>
+							__cmp__(self, other) Самый базовый из методов сравнения. Он, в действительности, определяет поведение для всех операторов сравнения (>, ==, !=, итд.), но не всегда так, как вам это нужно (например, если эквивалентность двух экземпляров определяется по одному критерию, а то что один больше другого по какому-нибудь другому). __cmp__ должен вернуть отрицательное число, если self < other, ноль, если self == other, и положительное число в случае self > other. Но, обычно, лучше определить каждое сравнение, которое вам нужно, чем определять их всех в __cmp__. Но __cmp__ может быть хорошим способом избежать повторений и увеличить ясность, когда все необходимые сравнения оперерируют одним критерием;
+						</li>
+
+						<li>
+							__eq__(self, other) Определяет поведение оператора равенства, ==
+						</li>
+
+						<li>
+							__ne__(self, other) Определяет поведение оператора неравенства, !=
+						</li>
+
+						<li>
+							__lt__(self, other) Определяет поведение оператора меньше, <
+						</li>
+
+						<li>
+							__gt__(self, other) Определяет поведение оператора больше, >
+						</li>
+
+						<li>
+							__le__(self, other) Определяет поведение оператора меньше или равно, <=
+						</li>
+
+						<li>
+							__ge__(self, other) Определяет поведение оператора больше или равно, >=
+						</li>
+
+						<li>
+							__pos__(self) Определяет поведение для унарного плюса (+some_object)
+						</li>
+
+						<li>
+							__neg__(self) Определяет поведение для отрицания(-some_object)
+						</li>
+
+						<li>
+							__abs__(self) Определяет поведение для встроенной функции abs()
+						</li>
+
+						<li>
+							__invert__(self) Определяет поведение для инвертирования оператором ~
+						</li>
+
+						<li>
+							__round__(self, n) Определяет поведение для встроенной функции round(). n это число знаков после запятой, до которого округлить;
+						</li>
+
+						<li>
+							__floor__(self) Определяет поведение для math.floor(), то есть, округления до ближайшего меньшего целого.
+						</li>
+
+						<li>
+							__ceil__(self) Определяет поведение для math.ceil(), то есть, округления до ближайшего большего целого.
+						</li>
+
+						<li>
+							__trunc__(self) Определяет поведение для math.trunc(), то есть, обрезания до целого.
+						</li>
+
+						<li>
+							__add__(self, other) Сложение
+						</li>
+
+						<li>
+							__sub__(self, other) Вычитание
+						</li>
+
+						<li>
+							__mul__(self, other) Умножение
+						</li>
+
+						<li>
+							__floordiv__(self, other) Целочисленное деление, оператор
+						</li>
+
+						<li>
+							__div__(self, other) Деление, оператор /
+						</li>
+
+						<li>
+							__mod__(self, other) Остаток от деления, оператор %
+						</li>
+
+						<li>
+							__divmod__(self, other) Определяет поведение для встроенной функции divmod()
+						</li>
+
+						<li>
+							__pow__ Возведение в степень, оператор **
+						</li>
+
+						<li>
+							__lshift__(self, other) Двоичный сдвиг влево, оператор <<
+						</li>
+
+						<li>
+							__rshift__(self, other) Двоичный сдвиг вправо, оператор >>
+						</li>
+
+						<li>
+							__and__(self, other) Двоичное И, оператор &
+						</li>
+
+						<li>
+							__or__(self, other) Двоичное ИЛИ, оператор |
+						</li>
+
+						<li>
+							__xor__(self, other) Двоичный xor, оператор ^
+						</li>
+					</ul>
+					** Еще есть отраженные операторы, составные операторы и т.д.**
+				</p>
+			</p>
+		</section>
+	</div>
+	<footer></footer>
+</body>
+</html>
